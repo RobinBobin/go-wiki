@@ -23,7 +23,7 @@ func main() {
 
 	router.NoRoute(routehandlers.NoRoute)
 
-	router.GET("/:reason/*params", routehandlers.GetRoot)
+	router.GET("/arbitrary/*params", routehandlers.GetArbitrary)
 
 	router.Run(":8080")
 }

@@ -7,5 +7,5 @@ import (
 )
 
 func NoRoute(ctx *gin.Context) {
-	ctx.Redirect(http.StatusFound, "/NoReason")
+	ctx.Redirect(http.StatusFound, "/arbitrary")
 }

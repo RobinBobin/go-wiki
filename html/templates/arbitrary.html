@@ -1,0 +1,18 @@
+<html>
+  <link rel="stylesheet" href="/static/styles/styles.css" />
+  <body>
+    <p>go-gin is great again!</p>
+    <p>Path parameters:</p>
+    <ul>
+      {{ range $key, $value := .Path }}
+      <li>{{ $key }}: {{ $value }}</li>
+      {{ end }}
+    </ul>
+    <p>Query parameters:</p>
+    <ul>
+      {{ range $key, $value := .Query }}
+      <li>{{ $key }}: {{ $value }}</li>
+      {{ end }}
+    </ul>
+  </body>
+</html>
