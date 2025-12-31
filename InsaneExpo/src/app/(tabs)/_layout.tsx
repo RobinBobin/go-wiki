@@ -15,7 +15,9 @@ export default function TabLayout() {
         tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
         headerShown: false,
         tabBarButton: HapticTab,
-        tabBarStyle: { display: "none" },
+        tabBarStyle: {
+          display: process.env.EXPO_OS === "web" ? "none" : "flex",
+        },
       }}
     >
       <Tabs.Screen
@@ -34,6 +36,12 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => (
             <IconSymbol size={28} name="paperplane.fill" color={color} />
           ),
+        }}
+      />
+      <Tabs.Screen
+        name="hidden"
+        options={{
+          href: null,
         }}
       />
     </Tabs>

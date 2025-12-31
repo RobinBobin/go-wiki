@@ -1,5 +1,5 @@
 import { Image } from "expo-image";
-import { Platform, StyleSheet } from "react-native";
+import { Platform, StyleSheet, Text, TextInput, View } from "react-native";
 
 import { ExternalLink } from "@/components/external-link";
 import ParallaxScrollView from "@/components/parallax-scroll-view";
@@ -22,7 +22,48 @@ export default function TabTwoScreen() {
         />
       }
     >
+      <View style={{ alignSelf: "flex-end" }}>
+        <Text>kuku</Text>
+      </View>
+      <TextInput style={{ borderWidth: 1 }} />
+      <TextInput
+        multiline
+        numberOfLines={10}
+        style={{ borderWidth: 1, marginTop: 10 }}
+      />
       <ThemedView style={styles.titleContainer}>
+        <ThemedText
+          type="title"
+          style={{
+            fontFamily: Fonts.rounded,
+          }}
+        >
+          Explore
+        </ThemedText>
+        <ThemedText
+          type="title"
+          style={{
+            fontFamily: Fonts.rounded,
+          }}
+        >
+          Explore
+        </ThemedText>
+        <ThemedText
+          type="title"
+          style={{
+            fontFamily: Fonts.rounded,
+          }}
+        >
+          Explore
+        </ThemedText>
+        <ThemedText
+          type="title"
+          style={{
+            fontFamily: Fonts.rounded,
+          }}
+        >
+          Explore
+        </ThemedText>
         <ThemedText
           type="title"
           style={{
@@ -120,7 +161,6 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   titleContainer: {
-    flexDirection: "row",
     gap: 8,
   },
 });
